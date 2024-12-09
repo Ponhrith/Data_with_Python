@@ -1,8 +1,8 @@
 queue = []
 
 print("[a] Add a person into the line")
-print("[b] Remove the front person")
-print("[c] View the front person")
+print("[b] Remove the last person")
+print("[c] View the last person")
 print("[d] Exit Program")
 option = input("Enter your option: ")
 
@@ -16,18 +16,18 @@ while isExit == False:
         if queue == []:
             print("The list is empty. ")
         else:
-            queue.pop(0)
+            queue.pop()
     elif option == 'c':
         if queue == []:
             print("The list is empty")
-        else: print(queue[0])
+        else: print(queue[-1])
     elif option == 'd':
         print("You are exiting the program.")
     else:
         print("You have enter an invalid option.")
 
     print("[a] Add a person into the line")
-    print("[b] Remove the front person")
-    print("[c] View the front person")
+    print("[b] Remove the last person")
+    print("[c] View the last person")
     print("[d] Exit Program")
     option = input("Enter your option: ")
